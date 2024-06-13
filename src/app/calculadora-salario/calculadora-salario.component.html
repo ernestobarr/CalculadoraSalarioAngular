@@ -1,0 +1,15 @@
+<p>calculadora-salario works!</p>
+<div>
+    <h2>Calculadora de Salario</h2>
+    <label for="salario">Salario Base:</label>
+    <input type="number" id="salario" [(ngModel)]="salario">
+  
+    <button (click)="calcularSalarioLiquido()">Calcular</button>
+    
+    <div *ngIf="salarioLiquido !== undefined">
+      <p>Descuento de Renta: {{ descuentoRenta | currency }}</p>
+      <p>Descuento AFP: {{ descuentoAFP | currency }}</p>
+      <p>Descuento ISSS: {{ descuentoISSS | currency }}</p>
+      <p>Salario Liquido a Cancelar: {{ salarioLiquido | currency }}</p>
+    </div>
+  </div>  
